@@ -1,0 +1,69 @@
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <h3>Intel Thor Edison - Game</h3>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-12">
+            [Jogar]
+        </div>
+    </div>    
+    <div class="row">
+        <div class="col-md-6">
+            Resultado
+
+        </div>
+        <div class="col-md-6">
+            <div class="bar-container">
+                <div class="goal-bar">
+                    <div class="bar-wrap">
+                        <hr class="bar-line" />
+                        <hr class="bar-line" />
+                        <hr class="bar-line" />
+                        <hr class="bar-line" />
+                        <hr class="bar-line" />
+                        <hr class="bar-line" />
+                        <hr class="bar-line" />
+                        <hr class="bar-line" />
+                        <hr class="bar-line" />
+                        <hr class="bar-line" />
+
+                        <div class="bar" style="{{barStyle}}">
+                            <div class="bar-info" ng-class="{'info-above': infoAbove}">
+                                <div class="bar-info-inner">
+                                    {{current}} / {{goal}}
+                                </div>
+                            </div>
+                        </div>
+                        <span class="bar-label"></span>
+                    </div>
+
+                    <div class="bar-labels">
+                        <span class="bar-label">{{goal}}</span>
+                        <span class="bar-label">{{goal - goal / 10}}</span>
+                        <span class="bar-label">{{goal - (goal / 10 * 2)}}</span>
+                        <span class="bar-label">{{goal - (goal / 10 * 3)}}</span>
+                        <span class="bar-label">{{goal - (goal / 10 * 4)}}</span>
+                        <span class="bar-label">{{goal - (goal / 10 * 5)}}</span>
+                        <span class="bar-label">{{goal - (goal / 10 * 6)}}</span>
+                        <span class="bar-label">{{goal - (goal / 10 * 7)}}</span>
+                        <span class="bar-label">{{goal - (goal / 10 * 8)}}</span>
+                        <span class="bar-label">{{goal - (goal / 10 * 9)}}</span>
+                        <span class="bar-label">0</span>
+                    </div>
+                </div> <!-- /.goal-bar -->
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+    <footer>
+        <p>&copy; Intel Tecnologia 2015</p>
+    </footer>
+</div> <!-- /container -->
+
