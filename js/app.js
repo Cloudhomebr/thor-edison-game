@@ -8,14 +8,14 @@
         'DashboardController',
         'ngAnimate',
         'ui.bootstrap',
-        'btford.socket-io',
         'blockUI',
         'pascalprecht.translate',
-        'uiSwitch']);
+        'uiSwitch',
+        'btford.socket-io']);
 
     app.factory('socket', function (socketFactory) {
         return socketFactory({
-            ioSocket: io.connect('http://10.94.1.1:3000')
+            ioSocket: io.connect('http://10.94.1.6:3000')
         });
     });
 

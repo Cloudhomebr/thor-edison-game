@@ -4,16 +4,17 @@
  * @author Joao Henrique Bellincanta Gomes <jonnes1@gmail.com>
  */
 angular.module('DashboardController', [])
-        .controller('DashboardController', function ($scope, $state, $timeout, blockUI, $translate) {
+        .controller('DashboardController', function ($scope, $state, $timeout, blockUI, $translate, socket) {
             
                 $scope.current   = 0;
-                $scope.goal      = 500;
+                $scope.goal      = 1000;
                 $scope.infoAbove = false;
                 
-                $timeout(function() {
-                    $scope.current   = 200;
-                }, 3000);
-
+                socket.on('grito', function(data){
+                    console.log('Dado recebido no socket.io: ' + data);
+                    $scope.current   = data;
+                });
+               
                 var calculateBarPercent = function() {
                   var percent = ($scope.current / $scope.goal) * 100;
 
